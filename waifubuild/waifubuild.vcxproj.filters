@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\modelHandler_CUDA.cpp" />
+    <ClCompile Include="..\src\modelHandler_OpenCL.cpp" />
+    <ClCompile Include="..\src\modelHandler.cpp" />
+    <ClCompile Include="..\src\modelHandler_sse.cpp" />
+    <ClCompile Include="..\src\convertRoutine.cpp" />
+    <ClCompile Include="..\src\w2xconv.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\threadPool.cpp" />
+    <ClCompile Include="..\src\Buffer.cpp" />
+    <ClCompile Include="..\src\common.cpp" />
+    <ClCompile Include="..\src\cvwrap.cpp" />
+    <ClCompile Include="..\src\Env.cpp" />
+    <ClCompile Include="..\src\modelHandler_avx.cpp" />
+    <ClCompile Include="..\src\modelHandler_fma.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\modelHandler.hpp" />
+    <ClInclude Include="..\src\modelHandler_simd.hpp" />
+    <ClInclude Include="..\src\modelHandler_simd_unroll1.hpp" />
+    <ClInclude Include="..\src\modelHandler_simd_unroll2.hpp" />
+    <ClInclude Include="..\src\modelHandler_simd_unroll4.hpp" />
+    <ClInclude Include="..\src\modelHandler_simd_unroll5.hpp" />
+    <ClInclude Include="..\src\params.h" />
+    <ClInclude Include="..\src\sec.hpp" />
+    <ClInclude Include="..\src\threadPool.hpp" />
+    <ClInclude Include="..\src\w2xconv.h" />
+    <ClInclude Include="..\src\Buffer.hpp" />
+    <ClInclude Include="..\src\CLlib.h" />
+    <ClInclude Include="..\src\common.hpp" />
+    <ClInclude Include="..\src\compiler.h" />
+    <ClInclude Include="..\src\convertRoutine.hpp" />
+    <ClInclude Include="..\src\CUDAlib.h" />
+    <ClInclude Include="..\src\cvwrap.hpp" />
+    <ClInclude Include="..\src\Env.hpp" />
+    <ClInclude Include="..\src\filters.hpp" />
+    <ClInclude Include="..\src\modelHandler_avx_func.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\modelHandler_CUDA.cu" />
+    <None Include="..\src\modelHandler_OpenCL.cl" />
+  </ItemGroup>
+</Project>

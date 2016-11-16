@@ -5,6 +5,7 @@
 #include "sec.hpp"
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
 
 #ifdef _WIN32
 #include <windows.h>
@@ -297,6 +298,8 @@ filter_CUDA_impl(ComputeEnv *env,
 		 int ip_height,
 		 int nJob)
 {
+	double t0 = getsec();
+
 	CUresult r;
 	int devid = 0;
 
@@ -333,6 +336,8 @@ filter_CUDA_impl(ComputeEnv *env,
 		puts("fail: copy to weight");
 		exit(1);
 	}
+
+	double t1 = getsec();
 
 	size_t nOutputPlanes2 = nOutputPlanes;
 	size_t h = ip_height;
@@ -454,6 +459,9 @@ filter_CUDA_impl(ComputeEnv *env,
 			abort();
 		}
 	}
+
+	double t2 = getsec();
+
 	if (r != CUDA_SUCCESS) {
 		puts("fail: launch");
 		exit(1);
@@ -465,11 +473,21 @@ filter_CUDA_impl(ComputeEnv *env,
 		exit(1);
 	}
 
+	double t3 = getsec();
+
 	cuMemFree(d_weight);
 	cuMemFree(d_fbiases);
 
 	CUcontext old;
 	cuCtxPopCurrent(&old);
+
+	double t4 = getsec();
+
+	std::cout << (t1 - t0) * 1000 << "+"
+		<< (t2 - t1) * 1000 << "+"
+		<< (t3 - t2) * 1000 << "+"
+		<< (t4 - t3) * 1000 << "="
+		<< (t4 - t0) * 1000;
 }
 
 

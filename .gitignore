@@ -37,4 +37,13 @@ runbench
 runtest
 *.isa
 *.il
+*.suo
+*.pdb
+*.ipdb
+*.opendb
+*.vc.db
+*.iobj
+*.tlog
+*.exp
+*.log
 .gdbinit

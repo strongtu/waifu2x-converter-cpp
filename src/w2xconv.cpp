@@ -1614,7 +1614,7 @@ w2xconv_apply_filter_y(struct W2XConv *conv,
 const char *
 w2xconv_version(void)
 {
-	return BUILD_TS;
+	return "";// BUILD_TS;
 }
 
 #ifdef HAVE_OPENCV
