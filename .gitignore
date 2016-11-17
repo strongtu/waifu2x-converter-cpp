@@ -10,7 +10,6 @@ waifu2x-converter-cpp
 *.s
 *.ii
 perf.data*
-*.dll
 *.obj
 *.png
 *.exe
