@@ -11,8 +11,6 @@ waifu2x-converter-cpp
 *.ii
 perf.data*
 *.obj
-*.png
-*.exe
 src/modelHandler_OpenCL.cl.h
 src/modelHandler_CUDA.ptx.h
 *.ptx*
